@@ -24,13 +24,13 @@ export class Task3Service {
           let jsonobject = {}; //declare empty object
           let eachline = line[i].split(","); //get data which split comma in to array
           jsonobject = {
-            id: eachline[0],
+            id: Number(eachline[0]),
             first_name: eachline[1],
             last_name: eachline[2],
             email: eachline[3],
             gender: eachline[4],
             ip_address: eachline[5],
-            balance: eachline[6]
+            balance: Number(eachline[6])
           }
           // console.log(eachline);
           // for(let j = 0; j  < header.length; j++){
