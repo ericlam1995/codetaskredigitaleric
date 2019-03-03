@@ -5,7 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 //Using pipe to make different kind of sort
 export class CvslistsortPipe implements PipeTransform {
-
   transform(cvslist: any[], field: string ): any[]{
     if(!cvslist){
       return [];

@@ -16,7 +16,7 @@ export class Task2Component implements OnInit {
    }
 
   ngOnInit() {
-    //console.log(this.file);
+    //Set sort order by ID as default
     this.order = "id";
 
   }

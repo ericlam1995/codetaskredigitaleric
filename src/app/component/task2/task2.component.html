@@ -2,6 +2,7 @@
   <div class="jumbotron col-md-12">
     <p style="text-align: center">Task 2: CSV File</p>
   </div>
+  <!-- Dropdownlist used for choosing field to sort -->
   <div class="jumbotron col-md-12">
     <select class="form-control" [(ngModel)]="order">
       <option value="id">ID</option>
@@ -23,6 +24,7 @@
       <th>IP Address</th>
       <th>Balance</th>
     </tr>
+    <!-- Display result from CSV -->
     <tr *ngFor="let x of task3serc.jsonresult | cvslistsort : order">
       <td>{{x.id}}</td>
       <td>{{x.first_name}}</td>
