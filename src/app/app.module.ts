@@ -1,24 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { PapaParseModule } from 'ngx-papaparse';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Task1Component } from './component/task1/task1.component';
+
 import { Task2Component } from './component/task2/task2.component';
-import { Task3Component } from './component/task3/task3.component';
+
+import { Task3Service } from './service/task3.service';
+import { HttpModule } from '@angular/http';
+
+import { CvslistsortPipe } from './pipes/cvslistsort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Task1Component,
     Task2Component,
-    Task3Component
+    CvslistsortPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PapaParseModule,
+    FormsModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [Task3Service, CvslistsortPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
